@@ -1,0 +1,72 @@
+% Inoffizielle LaTeX-Vorlage für Vorträge
+% an der Fakultät für Chemie und Pharmazie
+% der Albert-Ludwigs-Universität Freiburg
+%
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl
+% typografischen Ansprüchen ansatzweise gerecht zu werden als auch
+% nutzbar zu sein.
+%
+% Jegliche Nutzung auf eigene Verantwortung.
+%
+% Copyright (c) 2018, Till Biskup
+
+%% Einbinden von Quellcode
+\usepackage{listings}
+
+% Unterstützte Sprachen sollten einmal geladen werden
+\lstloadlanguages{[LaTeX]TeX,Python,Matlab}
+
+\lstset{
+  basicstyle=\footnotesize\ttfamily, % Standardschrift
+  showstringspaces=false,            % Leerzeichen in Strings anzeigen?
+  tabsize=2,                         % Größe von Tabs
+  breaklines=true,                   % Zeilen werden umgebrochen
+  prebreak=\dots,                    % drei Punkte vor dem Zeilenumbruch
+  keywordstyle=\color{blue},         % Stil der Schlüsselworte
+  frame=tb,                          % Rahmenlinie oben und unten
+  belowcaptionskip=2ex               % Platz unterhalb der Überschrift
+}
+
+% Umlaute dürfen direkt in den Listings eingegeben werden
+\lstset{
+  literate=%
+  {Ö}{{\"O}}1
+  {Ä}{{\"A}}1
+  {Ü}{{\"U}}1
+  {ß}{{\ss}}1
+  {ü}{{\"u}}1
+  {ä}{{\"a}}1
+  {ö}{{\"o}}1
+  {~}{{\textasciitilde}}1,
+  extendedchars=true
+}
+
+\lstdefinestyle{latex}{
+  language=[LaTeX]TeX,
+  commentstyle=\color{gray},       % Stil der Kommentare
+  numbers=left,                    % Ort der Zeilennummern
+  numberstyle=\tiny,               % Stil der Zeilennummern
+  stepnumber=2,                    % Abstand zwischen den Zeilennummern
+  numbersep=5pt,                   % Abstand der Nummern zum Text
+  xleftmargin=17pt,
+  framexleftmargin=17pt
+}
+
+% Stil für den Anhang mit kleinerer Schriftgröße
+\lstdefinestyle{latex-appendix}{
+  language=[LaTeX]TeX,
+  basicstyle=\scriptsize\ttfamily, % Standardschrift
+  commentstyle=\color{gray},       % Stil der Kommentare
+  numbers=left,                    % Ort der Zeilennummern
+  numberstyle=\tiny,               % Stil der Zeilennummern
+  stepnumber=2,                    % Abstand zwischen den Zeilennummern
+  numbersep=5pt,                   % Abstand der Nummern zum Text
+  xleftmargin=17pt,
+  framexleftmargin=17pt,
+  morekeywords={lstset,KOMAoptions,addkomafont,setcapindent,%
+    graphicspath,setstretch,DeclareGraphicsExtensions,addtokomafont,%
+    DeclareMathAlphabet,addbibresource,DeclareFieldFormat,%
+    renewbibmacro,lstloadlanguages,lstdefinestyle,hypersetup,color,%
+    lvert,rvert,sisetup,appto}
+}
+

@@ -1,0 +1,242 @@
+\documentclass[utf8]{beamer}
+
+\usepackage{ufcd} 
+% Alternative für englischsprachige Dokumente
+%\usepackage[mainlanguage=english]{ufcd}
+
+\input{LaTeX-Header/mathematik.tex}
+\input{LaTeX-Header/typografie.tex}
+\input{LaTeX-Header/layout.tex}
+\input{LaTeX-Header/listings.tex}
+\input{LaTeX-Header/grafiken.tex}
+
+%% Titeldaten
+\title[Präsentationen mit \LaTeX{}]{Vorlage für Präsentationen mit \LaTeX{}}
+\subtitle[]{Ein kurzer Überflug}
+\author[H. Wurst]{Hans Wurst}
+\date{11.11.2011}
+\institute[IPC]{Institut für Physikalische Chemie\\ Albert-Ludwigs-Universität Freiburg}
+\subject{Vorlage für Präsentationen}
+
+\begin{document}
+
+\begin{frame}[plain]
+% Wenn Navigationssymbole gewünscht sind, auf der Titelseite ausschalten
+%\setbeamertemplate{navigation symbols}{}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Überblick}
+
+\tableofcontents
+
+\end{frame}
+
+
+\section{Motivation}
+
+
+\begin{frame}
+\frametitle{Motivation}
+\framesubtitle{Warum nur habe ich mir das ans Bein gebunden?}
+
+\begin{itemize}
+\item Titel sollten aussagekräftig und kurz (einzeilig) sein.
+\begin{itemize}
+\item Untertitel sind rein optional.
+\end{itemize}
+
+\item möglichst keinen Fließtext, sondern nur Stichpunkte
+\begin{itemize}
+\item nicht mehr als zwei Ebenen von Stichpunkten
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\setbeamertemplate{itemize item}{\color{Mittel-Gruen}{\ding{56}\;}}
+\item Symbole lassen sich für Listen umdefinieren.
+\item Das kann mitunter hilfreich sein.
+\setbeamertemplate{itemize item}{\color{Uni-Rot}{\ding{52}\,}}
+\item Umdefinieren geht auch innerhalb einer Liste.
+\end{itemize}
+
+\begin{itemize}
+\setbeamertemplate{itemize item}{\color{Uni-Rot}{\ding{52}\,}}
+\item Oft sind aber zwei unabhängige Listen besser.
+\item Zumal dann automatisch ein kleiner Abstand entsteht.
+\end{itemize}
+
+\end{frame}
+
+
+\section{Theorie}
+
+
+\begin{frame}[t]
+\frametitle{Theorie}
+\framesubtitle{Darf's ein bisschen Goethe sein?}
+
+\begin{quote}
+Grau, teurer Freund, ist alle Theorie,\\
+Und grün des Lebens goldner Baum.
+\quelle{J.W. von Goethe: Faust 1, Studierzimmer. (Mephistopheles)}
+\end{quote}
+
+\begin{align*}
+\hat{H}\Psi = E\Psi
+\end{align*}
+
+\begin{itemize}
+\item \package{amsmath} wird von \package{beamer} bereits geladen.
+\item mathematische Formeln in \textrm{Serifenschrift} setzen
+\begin{itemize}
+\item Standardschrift auf Folien sonst serifenlos
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\section{Ergebnisse}
+
+
+\begin{frame}[t]
+\frametitle{Ergebnisse}
+\framesubtitle{Ich wünscht', ich hätte was geschafft \ldots}
+
+\begin{columns}[T]
+\begin{column}{.45\textwidth}
+\structure{erste Spalte}
+
+\begin{itemize}
+\item gut geeignet zur Anordnung von\\ Text und Bild
+\item relative Ausrichtung\\ optional möglich
+\item Folie ist insgesamt oben bündig ausgerichtet
+\end{itemize}
+
+\end{column}
+%
+\begin{column}{.45\textwidth}
+\structure{zweite Spalte}
+
+\vspace*{1ex}
+
+\emph{hier könnte ein Bild stehen}
+
+\begin{itemize}
+\item Bilder einfügen wie üblich über \command{includegraphics}
+\item meist keine \command{figure}-Umgebung drum herum
+\end{itemize}
+
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Ergebnisse}
+\framesubtitle{Beispiele für die unterschiedlichen vordefinierten Blockumgebungen}
+
+\begin{block}{Blockname}
+Das ist eine \command{block}-Umgebung.
+\end{block}
+
+\begin{alertblock}{Blockname}
+Das ist eine \command{alertblock}-Umgebung.
+\end{alertblock}
+
+\begin{exampleblock}{Blockname}
+Das ist eine \command{exampleblock}-Umgebung.
+\end{exampleblock}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Ergebnisse}
+\framesubtitle{Quellcode-Listings bedürfen besonderer Behandlung}
+
+\begin{lstlisting}[language=Python]
+def hello():
+    """Print "Hello World" and return None"""
+    print("Hello World")
+
+# main program
+hello()
+\end{lstlisting}
+
+\begin{itemize}
+\item Quellcode-Listings (und alle \command{verbatim}-Umgebungen)\\ nur über Option \command{fragile} für \command{frame} möglich
+\item Anderenfalls gibt \LaTeX{} einen Fehler aus.
+\end{itemize}
+
+\end{frame}
+
+
+\section{Zusammenfassung}
+
+
+\begin{frame}
+\frametitle{Zusammenfassung}
+\framesubtitle{Wie sie sehen, sehen sie nichts.}
+
+\structure{Listen lassen sich schrittweise aufdecken:}
+
+\begin{itemize}[<+->]
+\item Am Anfang hatte mein Betreuer\\ eine vielversprechende Idee.
+\begin{itemize}
+\item ...und deshalb habe ich mich auch darauf eingelassen.
+\end{itemize}
+
+\item Dann hat er mich ein Semester lang versklavt.
+
+\item Rausgekommen ist auch nichts.
+
+\item Aber mit diesem Vortrag habe ich meine Pflicht getan.
+\end{itemize}
+
+\begin{itemize}
+\item<6-> Das geht auch manuell.
+\begin{itemize}
+\item Vorteil: Unterpunkte werden gleichzeitig aufgedeckt.
+\item Nachteil: Reihenfolge muss \alert<7->{explizit angegeben} werden
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Danksagung}
+
+Meerschweinchen\\
+Goldfisch\\
+Eltern\\
+\ldots
+
+\vspace*{\fill}
+
+\begin{center}
+\structure{That does it -- screw you, guys I'm goin' home!}
+\end{center}
+
+\end{frame}
+
+\newcounter{finalframe}
+\setcounter{finalframe}{\value{framenumber}}
+\appendix
+
+
+\begin{frame}
+\frametitle{Anhang}
+\framesubtitle{Was ich noch gesagt hätte, wenn noch Zeit gewesen wäre}
+
+Things you never wanted to know -- but were forced to find out.
+
+\end{frame}
+
+\setcounter{framenumber}{\value{finalframe}}
+\end{document}

@@ -1,0 +1,40 @@
+% Inoffizielle LaTeX-Vorlage für Vorträge
+% an der Fakultät für Chemie und Pharmazie
+% der Albert-Ludwigs-Universität Freiburg
+%
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl
+% typografischen Ansprüchen ansatzweise gerecht zu werden als auch
+% nutzbar zu sein.
+%
+% Jegliche Nutzung auf eigene Verantwortung.
+%
+% Copyright (c) 2018, Till Biskup
+
+% Schriftart fuer Formeln anpassen: Serifenschrift
+\usefonttheme[onlymath]{serif}
+
+% Vektoren: fett, kursiv
+\usepackage{bm}
+\renewcommand*{\vec}[1]{\bm{#1}}
+
+% Tensoren: serifenlos, fett, kursiv
+\DeclareMathAlphabet{\mathbfsf}{\encodingdefault}{\sfdefault}{bx}{sl}
+\newcommand*{\tens}[1]{\mathbfsf{#1}}
+
+% Differentialoperator: aufrecht
+\newcommand*{\diff}{\mathrm{d}}
+
+% mathematische Konstanten: aufrecht
+\newcommand*{\im}{\mathrm{i}}
+\newcommand*{\e}{\mathrm{e}}
+
+% für das aufrechte kleine pi: \uppi
+\usepackage[Symbolsmallscale]{upgreek}
+
+% Operatoren mit Dach
+\newcommand*{\op}[1]{\hat{#1}}
+
+% Dirac-Notation
+\newcommand*{\bra}[1]{\left\langle#1\right\rvert}
+\newcommand*{\ket}[1]{\left\lvert#1\right\rangle}
+\newcommand*{\braket}[2]{\langle#1\lvert#2\rangle}

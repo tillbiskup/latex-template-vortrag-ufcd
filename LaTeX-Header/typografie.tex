@@ -1,0 +1,45 @@
+% Inoffizielle LaTeX-Vorlage für Vorträge
+% an der Fakultät für Chemie und Pharmazie
+% der Albert-Ludwigs-Universität Freiburg
+%
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl
+% typografischen Ansprüchen ansatzweise gerecht zu werden als auch
+% nutzbar zu sein.
+%
+% Jegliche Nutzung auf eigene Verantwortung.
+%
+% Copyright (c) 2018, Till Biskup
+
+%% Anführungszeichen sprachabhängig und "intelligent"
+\usepackage[autostyle]{csquotes}
+
+%% typografisch korrekte Tabellen
+\usepackage{booktabs}
+
+%% Korrekter Satz von Zahlen und Einheiten
+\usepackage{siunitx}
+
+% Komma als Dezimaltrennzeichen im Text (unabhängig von der Eingabe)
+\sisetup{output-decimal-marker={,}}
+
+% Befehl für Quellenangaben
+\renewcommand*{\thefootnote}{}
+\renewcommand*{\footnoterule}{\rule{0cm}{0cm}}
+% Quellenangaben frei formatierbar, rechtsbündig unten auf der Seite
+\newcommand*{\quelle}[1]{\footnotetext{\raggedleft{\tiny #1}}}
+
+%% Pakete für zusätzliche Symbole
+\usepackage{pifont}
+
+%% Logische Textauszeichnung
+% fremdsprachige Begriffe kursiv
+\newcommand*{\foreign}[1]{\emph{#1}}
+
+% LaTeX-Paketnamen in Schreibmaschinenschrift (dicktengleich)
+\newcommand*{\package}[1]{\texttt{#1}}
+
+% (LaTeX-)Befehle in Schreibmaschinenschrift (dicktengleich)
+\newcommand*{\command}[1]{\texttt{#1}}
+
+% Datei- und Verzeichnisnamen in Schreibmaschinenschrift
+\newcommand*{\filename}[1]{\texttt{#1}}

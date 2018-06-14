@@ -1,0 +1,24 @@
+.DS_Store
+*~
+*zip
+*gz
+*tez
+*aux
+*dvi
+*log
+*nav
+*out
+*snm
+*toc
+*bbl
+*blg
+*pdf
+*lo?
+*bcf
+*run.xml
+*vrb
+*maf
+*mtc*
+# specific files
+!Abbildungen/eigene/*.pdf
+!Abbildungen/fremde/*.pdf
