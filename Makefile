@@ -14,4 +14,4 @@ trans:
 	pdflatex "\PassOptionsToClass{trans}{beamer}\input{$(LATEXBASEFILE)}"
 
 clean:
-	rm -f *aux *lo? *xml *out *toc *bbl *bcf *blg *.mtc* *maf
+	rm -f *aux *lo? *xml *out *toc *bbl *bcf *blg *.mtc* *maf *nav *snm *vrb
